@@ -15,4 +15,12 @@ router.get('/', (req, res) => {
   }
 })
 
+//@des create student record
+//@route POST /api/students
+router.post('/', (req, res) => {
+  const newStudent = req.body;
+  students.push(newStudent)
+  res.send(req.body);
+})
+
 module.exports = router;
